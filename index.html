@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hotel Vison • Privacidade e conforto 24h em Nova Iguaçu</title>
+    <meta name="description" content="Hotel Vison em Nova Iguaçu: suítes discretas com garagem privativa, atendimento 24h, Wi‑Fi, higiene rigorosa e total privacidade. Reserve pelo WhatsApp." />
+    <link rel="canonical" href="https://hotelvison.com/" />
+    <meta property="og:title" content="Hotel Vison • Privacidade e conforto 24h" />
+    <meta property="og:description" content="Suítes discretas com garagem privativa em Nova Iguaçu. Atendimento 24h. Reserve pelo WhatsApp." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hotelvison.com/" />
+    <meta name="theme-color" content="#0b0b0d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="resources/Gemini_Generated_Image_isbz06isbz06isbz.png" />
+    <style>
+      :root {
+        --bg: #0b0b0d;
+        --surface: #111216;
+        --surface-2: #17171c;
+        --text: #e8e8ea;
+        --muted: #b7b7bd;
+        --line: #202028;
+        --gold: #d4af37;
+        --gold-2: #c9a227;
+        --shadow: 0 10px 30px rgba(0,0,0,0.6);
+        --radius: 14px;
+        --maxw: 1200px;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        color: var(--text);
+        background: radial-gradient(1200px 800px at 80% -10%, #14151b 0%, var(--bg) 60%);
+        line-height: 1.55;
+        color-scheme: dark;
+      }
+      a { color: inherit; text-decoration: none; }
+      img { max-width: 100%; display: block; }
+      .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+      /* Header */
+      header {
+        position: fixed; inset: 0 0 auto 0; height: 72px;
+        display: flex; align-items: center;
+        background: rgba(10,10,12,0.55);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        z-index: 50;
+      }
+      .nav {
+        display: flex; align-items: center; justify-content: space-between;
+      }
+      .brand { display: flex; align-items: center; gap: 12px; }
+      .brand-logo-img { height: 42px; width: auto; display: block; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.4); }
+      .brand-name {
+        font-family: Cinzel, serif;
+        font-weight: 700;
+        font-size: 17px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        display: grid;
+        line-height: 1.05;
+      }
+      .brand-name .brand-hotel, .brand-name .brand-vison { display: block; }
+      @media (min-width: 720px) { .brand-name { font-size: 18px; } .brand-logo-img { height: 50px; } }
+      .brand-hotel { color: var(--text); opacity: 0.9; }
+      .brand-vison { color: var(--gold); }
+      nav ul { list-style: none; display: flex; gap: 22px; padding: 0; margin: 0; align-items: center; }
+      nav a { color: var(--muted); font-weight: 500; font-size: 14px; opacity: 0.9; }
+      nav a:hover { color: var(--text); }
+      .cta {
+        display: inline-flex; align-items: center; gap: 10px;
+        background: linear-gradient(180deg, var(--gold), var(--gold-2));
+        color: #0e0e0f; padding: 10px 16px; border-radius: 999px; font-weight: 700; font-size: 14px;
+        box-shadow: 0 10px 25px rgba(212,175,55,0.25), inset 0 1px 0 rgba(255,255,255,0.2);
+      }
+      .cta svg { width: 18px; height: 18px; }
+
+      /* Hero */
+      .hero { position: relative; height: 100vh; min-height: 640px; }
+      .slides { position: absolute; inset: 0; overflow: hidden; }
+      .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 900ms ease; }
+      .slide img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.95) contrast(1.05) brightness(0.8); }
+      .slide.active { opacity: 1; }
+      .hero-overlay { position: absolute; inset: 0; background: radial-gradient(100% 60% at 20% 50%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.65) 100%), linear-gradient(180deg, rgba(7,7,8,0.55) 0%, rgba(7,7,8,0.95) 100%); }
+      .hero-content { position: relative; z-index: 2; height: 100%; display: grid; align-items: end; }
+      .hero-inner { padding: 120px 0 80px; max-width: 780px; }
+      .eyebrow { color: var(--gold); letter-spacing: 0.3em; text-transform: uppercase; font-size: 12px; font-weight: 700; opacity: 0.9; }
+      h1 { font-family: Cinzel, serif; margin: 10px 0 14px; font-size: clamp(28px, 6vw, 58px); line-height: 1.1; font-weight: 700; }
+      .subtitle { color: var(--muted); font-size: clamp(14px, 2.3vw, 18px); max-width: 640px; }
+      .hero-actions { display: flex; align-items: center; gap: 14px; margin-top: 24px; flex-wrap: wrap; }
+      .call-num { color: var(--muted); font-weight: 600; }
+
+      /* Sections */
+      section { padding: 80px 0; position: relative; }
+      section .section-title { font-family: Cinzel, serif; font-size: clamp(22px, 4vw, 34px); margin: 0 0 8px; }
+      section .section-subtitle { color: var(--muted); margin-bottom: 28px; }
+      .divider { height: 1px; background: linear-gradient(90deg, rgba(212,175,55,0.3), rgba(255,255,255,0)); margin: 24px 0 40px; }
+
+      /* Suites */
+      .suites-grid { display: grid; grid-template-columns: 1fr; gap: 22px; }
+      @media (min-width: 820px) { .suites-grid { grid-template-columns: repeat(3, 1fr); gap: 26px; } }
+      .suite-card { background: linear-gradient(180deg, var(--surface-2), var(--surface)); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+      .suite-media { position: relative; height: 220px; overflow: hidden; }
+      .suite-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
+      .suite-card:hover .suite-media img { transform: scale(1.05); }
+      .suite-body { padding: 18px; display: grid; gap: 10px; }
+      .suite-title { font-weight: 700; font-family: Cinzel, serif; font-size: 18px; }
+      .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+      .tag { font-size: 12px; color: var(--muted); border: 1px solid var(--line); padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,0.03); }
+      .tag.gold { color: #0d0d0e; background: linear-gradient(180deg, var(--gold), var(--gold-2)); border: none; font-weight: 800; }
+
+      /* Periods */
+      .periods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      @media (max-width: 720px) { .periods { grid-template-columns: 1fr; } }
+      .period-card { background: linear-gradient(180deg, var(--surface), #0f0f13); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+      .period-time { font-family: Cinzel, serif; font-size: 28px; color: var(--gold); font-weight: 700; }
+      .period-note { color: var(--muted); font-size: 14px; }
+
+      /* Promise */
+      .promise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      @media (max-width: 980px) { .promise-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 560px) { .promise-grid { grid-template-columns: 1fr; } }
+      .promise-item { background: linear-gradient(180deg, var(--surface-2), var(--surface)); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: center; }
+      .promise-icon { width: 44px; height: 44px; border-radius: 10px; background: radial-gradient(120% 120% at 30% 20%, rgba(212,175,55,0.25), rgba(212,175,55,0.05)); display: grid; place-items: center; border: 1px solid rgba(212,175,55,0.2); }
+      .promise-icon svg { width: 22px; height: 22px; color: var(--gold); }
+      .promise-title { font-weight: 700; margin: 0; font-size: 16px; }
+      .promise-desc { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+
+      /* Map and contact */
+      .location-card { display: grid; grid-template-columns: 1.1fr 1fr; gap: 18px; align-items: stretch; }
+      @media (max-width: 900px) { .location-card { grid-template-columns: 1fr; } }
+      .map-embed { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); min-height: 340px; }
+      .address { background: linear-gradient(180deg, var(--surface-2), var(--surface)); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); display: grid; gap: 10px; }
+      .address p { margin: 0; color: var(--muted); }
+
+      /* Footer */
+      footer { padding: 28px 0 50px; color: var(--muted); border-top: 1px solid var(--line); background: #0a0a0c; }
+      .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+      .footer-inner small { opacity: 0.8; }
+
+      /* Floating WhatsApp */
+      .whatsapp-fab {
+        position: fixed; right: 18px; bottom: 20px; z-index: 70;
+        display: inline-flex; align-items: center; gap: 10px;
+        background: #25d366; color: #04150a; padding: 12px 16px; border-radius: 999px; font-weight: 800; box-shadow: 0 12px 30px rgba(37,211,102,0.35);
+      }
+      .whatsapp-fab svg { width: 18px; height: 18px; }
+
+      /* Reveal on scroll */
+      .reveal { opacity: 0; transform: translateY(18px); transition: opacity 700ms ease, transform 700ms ease; }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+
+      /* Utilities */
+      .muted { color: var(--muted); }
+      .spacer-sm { height: 10px; }
+      .spacer { height: 24px; }
+      .hr { height: 1px; background: var(--line); margin: 6px 0; }
+      .phone { font-variant-numeric: tabular-nums; letter-spacing: 0.5px; }
+      .pill { display: inline-block; padding: 6px 10px; border: 1px solid var(--line); color: var(--muted); border-radius: 999px; font-size: 12px; }
+      .gold { color: var(--gold); }
+    </style>
+  </head>
+  <body>
+    <a href="#suites" class="pill" style="position:fixed; left:-9999px;">Ir para conteúdo</a>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <img class="brand-logo-img" src="resources/Gemini_Generated_Image_isbz06isbz06isbz.png" alt="Logo Hotel Vison" />
+          <div class="brand-name" aria-label="Hotel Vison"><span class="brand-hotel">Hotel</span><span class="brand-vison">Vison</span></div>
+        </div>
+        <nav aria-label="Navegação primária">
+          <ul>
+            <li><a href="#suites">Suítes</a></li>
+            <li><a href="#periodos">Períodos</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#localizacao">Localização</a></li>
+            <li>
+              <a class="cta" href="https://wa.me/5521987474202" target="_blank" rel="noopener" aria-label="Reservar pelo WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012.01 0C5.39 0 .06 5.33.06 11.93c0 2.1.55 4.07 1.51 5.78L0 24l6.5-1.53a12 12 0 005.5 1.4h.01c6.62 0 11.95-5.33 11.95-11.93 0-3.19-1.25-6.2-3.45-8.46zM12 21.22h-.01a9.3 9.3 0 01-4.75-1.3l-.34-.2-3.86.91.82-3.77-.22-.39a9.27 9.27 0 01-1.3-4.74c0-5.13 4.18-9.3 9.3-9.3 2.49 0 4.83.97 6.6 2.74a9.25 9.25 0 012.73 6.58c0 5.12-4.18 9.27-9.3 9.27zm5.3-6.93c-.29-.15-1.71-.84-1.97-.93-.26-.1-.45-.15-.64.14-.19.28-.75.92-.92 1.1-.17.18-.34.2-.63.07-.29-.14-1.2-.44-2.27-1.4-.84-.75-1.4-1.66-1.56-1.94-.16-.28-.02-.43.12-.58.12-.12.28-.3.42-.45.14-.15.18-.25.27-.42.09-.17.05-.31-.02-.45-.07-.14-.64-1.53-.88-2.09-.23-.55-.47-.47-.64-.48l-.54-.01c-.17 0-.45.06-.68.31-.23.25-.89.86-.89 2.1 0 1.24.91 2.44 1.04 2.61.12.17 1.79 2.82 4.35 3.95.61.26 1.08.41 1.45.52.61.19 1.16.16 1.6.1.49-.07 1.71-.7 1.95-1.37.24-.68.24-1.25.17-1.37-.07-.12-.26-.2-.55-.35z"/></svg>
+                WhatsApp
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="home" aria-label="Hotel Vison - Privacidade e conforto">
+        <div class="slides" aria-hidden="true">
+          <div class="slide active"><img src="resources/1a307d4d-8138-42c3-9f05-baab49b8cc50-suites.jpg" alt="Suíte Hotel Vison" loading="eager" /></div>
+          <div class="slide"><img src="resources/20556932-3c0f-437c-9e78-0d5ee08d6fe0-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" /></div>
+          <div class="slide"><img src="resources/5d64d52d-e411-442b-b678-bf05d94e4316-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" /></div>
+          <div class="slide"><img src="resources/68956e6e-42cb-424e-a6c3-564d855f6c50-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" /></div>
+          <div class="slide"><img src="resources/732e7595-b2d7-4532-ac32-0b0e4dddc47d-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" /></div>
+          <div class="slide"><img src="resources/a23af49c-5110-422f-b746-f7c2edecb1f7-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" /></div>
+          <div class="slide"><img src="resources/b644e80b-1172-433a-b219-50cd6d9b23d0-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" /></div>
+          <div class="slide"><img src="resources/1c590355-7e82-47b0-94cf-c5f0ce615578-suites%20(1).jpg" alt="Suíte Hotel Vison" loading="lazy" /></div>
+          <div class="slide"><img src="resources/391734e3-d449-40a0-9e93-158aa7365a87-suites%20(1).jpg" alt="Suíte Hotel Vison" loading="lazy" /></div>
+          <div class="hero-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="container hero-content">
+          <div class="hero-inner reveal">
+            <div class="eyebrow">PRIVACIDADE • CONFORTO • DISCRIÇÃO</div>
+            <h1>Seu refúgio urbano em Nova Iguaçu</h1>
+            <p class="subtitle">Suítes discretas com garagem privativa, ambiente climatizado e atendimento 24h. A poucos minutos do centro, com total privacidade e conforto para cada momento.</p>
+            <div class="hero-actions">
+              <a class="cta" href="https://wa.me/5521987474202" target="_blank" rel="noopener" aria-label="Reservar pelo WhatsApp (abre em nova aba)">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012.01 0C5.39 0 .06 5.33.06 11.93c0 2.1.55 4.07 1.51 5.78L0 24l6.5-1.53a12 12 0 005.5 1.4h.01c6.62 0 11.95-5.33 11.95-11.93 0-3.19-1.25-6.2-3.45-8.46zM12 21.22h-.01a9.3 9.3 0 01-4.75-1.3l-.34-.2-3.86.91.82-3.77-.22-.39a9.27 9.27 0 01-1.3-4.74c0-5.13 4.18-9.3 9.3-9.3 2.49 0 4.83.97 6.6 2.74a9.25 9.25 0 012.73 6.58c0 5.12-4.18 9.27-9.3 9.27zm5.3-6.93c-.29-.15-1.71-.84-1.97-.93-.26-.1-.45-.15-.64.14-.19.28-.75.92-.92 1.1-.17.18-.34.2-.63.07-.29-.14-1.2-.44-2.27-1.4-.84-.75-1.4-1.66-1.56-1.94-.16-.28-.02-.43.12-.58.12-.12.28-.3.42-.45.14-.15.18-.25.27-.42.09-.17.05-.31-.02-.45-.07-.14-.64-1.53-.88-2.09-.23-.55-.47-.47-.64-.48l-.54-.01c-.17 0-.45.06-.68.31-.23.25-.89.86-.89 2.1 0 1.24.91 2.44 1.04 2.61.12.17 1.79 2.82 4.35 3.95.61.26 1.08.41 1.45.52.61.19 1.16.16 1.6.1.49-.07 1.71-.7 1.95-1.37.24-.68.24-1.25.17-1.37-.07-.12-.26-.2-.55-.35z"/></svg>
+                Reservar pelo WhatsApp
+              </a>
+              <span class="call-num">ou ligue <a class="phone" href="tel:+5521987474202">+55 21 98747‑4202</a></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Suites -->
+      <section id="suites">
+        <div class="container">
+          <h2 class="section-title">Nossas Suítes</h2>
+          <p class="section-subtitle">Conforto, design e total discrição. Escolha a categoria ideal para o seu momento.</p>
+          <div class="divider"></div>
+          <div class="suites-grid reveal">
+            <article class="suite-card">
+              <div class="suite-media">
+                <img src="resources/68956e6e-42cb-424e-a6c3-564d855f6c50-suites.jpg" alt="Suíte Standard" loading="lazy" />
+              </div>
+              <div class="suite-body">
+                <div class="suite-title">Suíte Standard</div>
+                <div class="tags">
+                  <span class="tag">ar‑condicionado</span>
+                  <span class="tag">TV c/ canais adultos</span>
+                  <span class="tag">garagem privativa</span>
+                  <span class="tag">saleta para refeições</span>
+                  <span class="tag gold">discreta e aconchegante</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="suite-card">
+              <div class="suite-media">
+                <img src="resources/732e7595-b2d7-4532-ac32-0b0e4dddc47d-suites.jpg" alt="Suíte Luxo" loading="lazy" />
+              </div>
+              <div class="suite-body">
+                <div class="suite-title">Suíte Luxo</div>
+                <div class="tags">
+                  <span class="tag">ar‑condicionado</span>
+                  <span class="tag">TV c/ canais adultos</span>
+                  <span class="tag">garagem privativa</span>
+                  <span class="tag">saleta para refeições</span>
+                  <span class="tag">hidromassagem</span>
+                  <span class="tag gold">ambiente amplo</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="suite-card">
+              <div class="suite-media">
+                <img src="resources/a23af49c-5110-422f-b746-f7c2edecb1f7-suites.jpg" alt="Suíte Master" loading="lazy" />
+              </div>
+              <div class="suite-body">
+                <div class="suite-title">Suíte Master</div>
+                <div class="tags">
+                  <span class="tag">ar‑condicionado</span>
+                  <span class="tag">TV c/ canais adultos</span>
+                  <span class="tag">garagem privativa</span>
+                  <span class="tag">saleta para refeições</span>
+                  <span class="tag">hidromassagem</span>
+                  <span class="tag">poltrona erótica</span>
+                  <span class="tag gold">experiência premium</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="spacer"></div>
+          <div class="muted">Amenidades padrão em todas as suítes: ar‑condicionado, TV (inclui canais eróticos), garagem privativa, saleta para refeições. Em suítes selecionadas: hidromassagem e poltrona erótica.</div>
+        </div>
+      </section>
+
+      <!-- Periods -->
+      <section id="periodos">
+        <div class="container">
+          <h2 class="section-title">Períodos</h2>
+          <p class="section-subtitle">Escolha a duração ideal para a sua estadia. Consulte valores pelo WhatsApp.</p>
+          <div class="divider"></div>
+          <div class="periods reveal">
+            <div class="period-card">
+              <div class="period-time">4h</div>
+              <div class="period-note">Perfeito para um encontro discreto e rápido.</div>
+            </div>
+            <div class="period-card">
+              <div class="period-time">6h</div>
+              <div class="period-note">Mais tempo para relaxar e aproveitar o momento.</div>
+            </div>
+            <div class="period-card">
+              <div class="period-time">12h</div>
+              <div class="period-note">Uma noite completa com todo conforto e privacidade.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Promise / Services -->
+      <section id="servicos">
+        <div class="container">
+          <h2 class="section-title">Nosso Compromisso</h2>
+          <p class="section-subtitle">Serviços essenciais para a sua tranquilidade.</p>
+          <div class="divider"></div>
+          <div class="promise-grid reveal">
+            <div class="promise-item">
+              <div class="promise-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-18.5a8.5 8.5 0 1 0 0 17 8.5 8.5 0 0 0 0-17zm.75 8.25h4.25a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75V6.5a.75.75 0 0 1 1.5 0V11.75z"/></svg>
+              </div>
+              <div>
+                <p class="promise-title">Atendimento 24h</p>
+                <p class="promise-desc">Equipe pronta o tempo todo, com discrição total.</p>
+              </div>
+            </div>
+            <div class="promise-item">
+              <div class="promise-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 4.5h-17a1 1 0 0 0-1 1v6.25a7.5 7.5 0 1 0 15 0V7h3a1 1 0 1 0 0-2zM5 11.75V6.5h11v5.25a5 5 0 1 1-10 0z"/></svg>
+              </div>
+              <div>
+                <p class="promise-title">Higiene rigorosa</p>
+                <p class="promise-desc">Limpeza e desinfecção cuidadosas antes de cada estadia.</p>
+              </div>
+            </div>
+            <div class="promise-item">
+              <div class="promise-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+              </div>
+              <div>
+                <p class="promise-title">Privacidade e discrição</p>
+                <p class="promise-desc">Entrada reservada, silêncio e máximo respeito ao seu momento.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Location / Map -->
+      <section id="localizacao">
+        <div class="container">
+          <h2 class="section-title">Onde estamos</h2>
+          <p class="section-subtitle">R. Cel. Bernardino de Melo, 1109 - Centro, Nova Iguaçu - RJ, 26221-140, Brasil</p>
+          <div class="divider"></div>
+          <div class="location-card reveal">
+            <div class="map-embed">
+              <iframe title="Mapa - Hotel Vison" width="100%" height="100%" style="border:0; filter: grayscale(40%) contrast(1.05) brightness(0.95);" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=R.%20Cel.%20Bernardino%20de%20Melo,%201109%20-%20Centro,%20Nova%20Igua%C3%A7u%20-%20RJ,%2026221-140,%20Brasil&output=embed"></iframe>
+            </div>
+            <div class="address">
+              <p><strong class="gold">Hotel Vison</strong></p>
+              <p>R. Cel. Bernardino de Melo, 1109 - Centro<br/>Nova Iguaçu - RJ, 26221-140, Brasil</p>
+              <div class="hr"></div>
+              <p>Reservas e dúvidas pelo WhatsApp:</p>
+              <p><a class="cta" href="https://wa.me/5521987474202" target="_blank" rel="noopener">Falar no WhatsApp</a></p>
+              <p>Telefone: <a class="phone" href="tel:+5521987474202">+55 21 98747‑4202</a></p>
+              <p class="muted">Estacionamento privativo e acesso discreto.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact CTA -->
+      <section id="contato">
+        <div class="container">
+          <div class="reveal" style="background: linear-gradient(180deg, var(--surface-2), var(--surface)); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: grid; gap: 10px; box-shadow: var(--shadow);">
+            <h2 class="section-title" style="margin:0">Pronto para sua experiência?</h2>
+            <p class="section-subtitle" style="margin:0">Fale conosco agora no WhatsApp e garanta sua suíte.</p>
+            <div>
+              <a class="cta" href="https://wa.me/5521987474202" target="_blank" rel="noopener">Reservar pelo WhatsApp</a>
+              <span class="pill" style="margin-left:10px;">+55 21 98747‑4202</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div class="brand" aria-hidden="true">
+          <img class="brand-logo-img" src="resources/Gemini_Generated_Image_isbz06isbz06isbz.png" alt="Logo Hotel Vison" />
+          <div class="brand-name"><span class="brand-hotel">Hotel</span><span class="brand-vison">Vison</span></div>
+        </div>
+        <small>© <span id="year"></span> Hotel Vison. Todos os direitos reservados.</small>
+      </div>
+    </footer>
+
+    <a class="whatsapp-fab" href="https://wa.me/5521987474202" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012.01 0C5.39 0 .06 5.33.06 11.93c0 2.1.55 4.07 1.51 5.78L0 24l6.5-1.53a12 12 0 005.5 1.4h.01c6.62 0 11.95-5.33 11.95-11.93 0-3.19-1.25-6.2-3.45-8.46zM12 21.22h-.01a9.3 9.3 0 01-4.75-1.3l-.34-.2-3.86.91.82-3.77-.22-.39a9.27 9.27 0 01-1.3-4.74c0-5.13 4.18-9.3 9.3-9.3 2.49 0 4.83.97 6.6 2.74a9.25 9.25 0 012.73 6.58c0 5.12-4.18 9.27-9.3 9.27zm5.3-6.93c-.29-.15-1.71-.84-1.97-.93-.26-.1-.45-.15-.64.14-.19.28-.75.92-.92 1.1-.17.18-.34.2-.63.07-.29-.14-1.2-.44-2.27-1.4-.84-.75-1.4-1.66-1.56-1.94-.16-.28-.02-.43.12-.58.12-.12.28-.3.42-.45.14-.15.18-.25.27-.42.09-.17.05-.31-.02-.45-.07-.14-.64-1.53-.88-2.09-.23-.55-.47-.47-.64-.48l-.54-.01c-.17 0-.45.06-.68.31-.23.25-.89.86-.89 2.1 0 1.24.91 2.44 1.04 2.61.12.17 1.79 2.82 4.35 3.95.61.26 1.08.41 1.45.52.61.19 1.16.16 1.6.1.49-.07 1.71-.7 1.95-1.37.24-.68.24-1.25.17-1.37-.07-.12-.26-.2-.55-.35z"/></svg>
+      Falar agora
+    </a>
+
+    <script>
+      // Year in footer
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Simple hero slideshow
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      let currentSlideIndex = 0;
+      function showSlide(index) {
+        slides.forEach((s, i) => s.classList.toggle('active', i === index));
+      }
+      function nextSlide() {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        showSlide(currentSlideIndex);
+      }
+      if (slides.length > 1) setInterval(nextSlide, 5500);
+
+      // Reveal on scroll
+      const revealEls = Array.from(document.querySelectorAll('.reveal'));
+      const onReveal = (entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      };
+      const io = new IntersectionObserver(onReveal, { threshold: 0.15 });
+      revealEls.forEach(el => io.observe(el));
+
+      // Prevent anchor from hiding behind fixed header
+      const adjustAnchorScroll = () => {
+        const header = document.querySelector('header');
+        const headerH = header ? header.offsetHeight : 72;
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+          link.addEventListener('click', (e) => {
+            const id = link.getAttribute('href');
+            if (!id || id === '#' || id.length < 2) return;
+            const target = document.querySelector(id);
+            if (!target) return;
+            e.preventDefault();
+            const rect = target.getBoundingClientRect();
+            const y = window.scrollY + rect.top - (headerH + 10);
+            window.scrollTo({ top: y, behavior: 'smooth' });
+            history.pushState(null, '', id);
+          }, { passive: false });
+        });
+      };
+      adjustAnchorScroll();
+    </script>
+
+    <!-- Local Business structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "Hotel Vison",
+        "url": "https://hotelvison.com/",
+        "telephone": "+55 21 98747-4202",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R. Cel. Bernardino de Melo, 1109",
+          "addressLocality": "Nova Iguaçu",
+          "addressRegion": "RJ",
+          "postalCode": "26221-140",
+          "addressCountry": "BR"
+        },
+        "amenityFeature": [
+          { "@type": "LocationFeatureSpecification", "name": "Garagem privativa", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Atendimento 24h", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Higiene rigorosa", "value": true }
+        ]
+      }
+    </script>
+  </body>
+  </html>
+
+
