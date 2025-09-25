@@ -30,5 +30,4 @@ python3 -m http.server 8000
 - Learnings: content‑first layout, strict CSP, and PT‑BR copywriting
 
 ## License
-Personal portfolio project — demo content only.
-
+All rights reserved. Personal portfolio project — not for production use.
