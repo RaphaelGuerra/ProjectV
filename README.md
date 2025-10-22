@@ -1,5 +1,17 @@
 # Hotel Vison — Static Website Prototype
 
+Last updated: 2025-10-22
+
+## Table of Contents
+
+<!-- TOC start -->
+- [What It Does](#what-it-does)
+- [How It Works](#how-it-works)
+- [Run Locally](#run-locally)
+- [Status & Learnings](#status-learnings)
+- [License](#license)
+<!-- TOC end -->
+
 Lightweight, single‑page marketing site prototype for a small hospitality business. Content is in Brazilian Portuguese (PT‑BR) to match the target audience.
 
 This is a portfolio side project for learning — content design, responsive layout, and simple SEO hygiene. It is not a production website, and it ships with `noindex` to avoid search indexing.
