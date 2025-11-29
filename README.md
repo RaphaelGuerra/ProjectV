@@ -8,7 +8,7 @@ Last updated: 2025-11-29
 - [What It Does](#what-it-does)
 - [How It Works](#how-it-works)
 - [Run Locally](#run-locally)
-- [Status & Learnings](#status-learnings)
+- [Status & Learnings](#status--learnings)
 - [License](#license)
 <!-- TOC end -->
 
