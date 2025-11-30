@@ -15,7 +15,6 @@ Last updated: 2025-11-30
 [![Lint](https://github.com/RaphaelGuerra/ProjectV/actions/workflows/lint.yml/badge.svg)](https://github.com/RaphaelGuerra/ProjectV/actions/workflows/lint.yml)
 [![Security](https://github.com/RaphaelGuerra/ProjectV/actions/workflows/security.yml/badge.svg)](https://github.com/RaphaelGuerra/ProjectV/actions/workflows/security.yml)
 
-
 Lightweight, single‑page marketing site prototype for a small hospitality
 business. Content is in Brazilian Portuguese (PT‑BR) to match the target
 audience.
