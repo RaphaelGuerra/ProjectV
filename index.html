@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://maps.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="resources/Gemini_Generated_Image_isbz06isbz06isbz.png" />
-    <link rel="preload" as="image" href="resources/1a307d4d-8138-42c3-9f05-baab49b8cc50-suites.jpg" />
+    <link rel="preload" as="image" href="resources/1a307d4d-8138-42c3-9f05-baab49b8cc50-suites.avif" type="image/avif" />
     <style>
       :root {
         --bg: #0b0b0d;
@@ -96,6 +96,7 @@
       .hero { position: relative; height: 100vh; height: 100svh; min-height: 640px; }
       .slides { position: absolute; inset: 0; overflow: hidden; }
       .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 900ms ease; }
+      .slide picture { position: absolute; inset: 0; display: block; }
       .slide img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.95) contrast(1.05) brightness(0.8); }
       .slide.active { opacity: 1; }
       .hero-overlay { position: absolute; inset: 0; background: radial-gradient(100% 60% at 20% 50%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.65) 100%), linear-gradient(180deg, rgba(7,7,8,0.55) 0%, rgba(7,7,8,0.95) 100%); }
@@ -119,6 +120,7 @@
       @media (min-width: 820px) { .suites-grid { grid-template-columns: repeat(3, 1fr); gap: 26px; } }
       .suite-card { background: linear-gradient(180deg, var(--surface-2), var(--surface)); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
       .suite-media { position: relative; height: 220px; overflow: hidden; }
+      .suite-media picture { position: absolute; inset: 0; display: block; }
       .suite-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
       .suite-card:hover .suite-media img { transform: scale(1.05); }
       .suite-body { padding: 18px; display: grid; gap: 10px; }
@@ -215,15 +217,69 @@
       <!-- Hero -->
       <section class="hero" id="home" aria-label="Hotel Vison - Privacidade e conforto">
         <div class="slides" aria-hidden="true">
-          <div class="slide active"><img src="resources/1a307d4d-8138-42c3-9f05-baab49b8cc50-suites.jpg" alt="Suíte Hotel Vison" loading="eager" decoding="async" fetchpriority="high" /></div>
-          <div class="slide"><img src="resources/20556932-3c0f-437c-9e78-0d5ee08d6fe0-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" /></div>
-          <div class="slide"><img src="resources/5d64d52d-e411-442b-b678-bf05d94e4316-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" /></div>
-          <div class="slide"><img src="resources/68956e6e-42cb-424e-a6c3-564d855f6c50-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" /></div>
-          <div class="slide"><img src="resources/732e7595-b2d7-4532-ac32-0b0e4dddc47d-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" /></div>
-          <div class="slide"><img src="resources/a23af49c-5110-422f-b746-f7c2edecb1f7-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" /></div>
-          <div class="slide"><img src="resources/b644e80b-1172-433a-b219-50cd6d9b23d0-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" /></div>
-          <div class="slide"><img src="resources/1c590355-7e82-47b0-94cf-c5f0ce615578-suites%20(1).jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" /></div>
-          <div class="slide"><img src="resources/391734e3-d449-40a0-9e93-158aa7365a87-suites%20(1).jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" /></div>
+          <div class="slide active">
+            <picture>
+              <source type="image/avif" srcset="resources/1a307d4d-8138-42c3-9f05-baab49b8cc50-suites.avif" />
+              <source type="image/webp" srcset="resources/1a307d4d-8138-42c3-9f05-baab49b8cc50-suites.webp" />
+              <img src="resources/1a307d4d-8138-42c3-9f05-baab49b8cc50-suites.jpg" alt="Suíte Hotel Vison" loading="eager" decoding="async" fetchpriority="high" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source type="image/avif" srcset="resources/20556932-3c0f-437c-9e78-0d5ee08d6fe0-suites.avif" />
+              <source type="image/webp" srcset="resources/20556932-3c0f-437c-9e78-0d5ee08d6fe0-suites.webp" />
+              <img src="resources/20556932-3c0f-437c-9e78-0d5ee08d6fe0-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source type="image/avif" srcset="resources/5d64d52d-e411-442b-b678-bf05d94e4316-suites.avif" />
+              <source type="image/webp" srcset="resources/5d64d52d-e411-442b-b678-bf05d94e4316-suites.webp" />
+              <img src="resources/5d64d52d-e411-442b-b678-bf05d94e4316-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source type="image/avif" srcset="resources/68956e6e-42cb-424e-a6c3-564d855f6c50-suites.avif" />
+              <source type="image/webp" srcset="resources/68956e6e-42cb-424e-a6c3-564d855f6c50-suites.webp" />
+              <img src="resources/68956e6e-42cb-424e-a6c3-564d855f6c50-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source type="image/avif" srcset="resources/732e7595-b2d7-4532-ac32-0b0e4dddc47d-suites.avif" />
+              <source type="image/webp" srcset="resources/732e7595-b2d7-4532-ac32-0b0e4dddc47d-suites.webp" />
+              <img src="resources/732e7595-b2d7-4532-ac32-0b0e4dddc47d-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source type="image/avif" srcset="resources/a23af49c-5110-422f-b746-f7c2edecb1f7-suites.avif" />
+              <source type="image/webp" srcset="resources/a23af49c-5110-422f-b746-f7c2edecb1f7-suites.webp" />
+              <img src="resources/a23af49c-5110-422f-b746-f7c2edecb1f7-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source type="image/avif" srcset="resources/b644e80b-1172-433a-b219-50cd6d9b23d0-suites.avif" />
+              <source type="image/webp" srcset="resources/b644e80b-1172-433a-b219-50cd6d9b23d0-suites.webp" />
+              <img src="resources/b644e80b-1172-433a-b219-50cd6d9b23d0-suites.jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source type="image/avif" srcset="resources/1c590355-7e82-47b0-94cf-c5f0ce615578-suites%20(1).avif" />
+              <source type="image/webp" srcset="resources/1c590355-7e82-47b0-94cf-c5f0ce615578-suites%20(1).webp" />
+              <img src="resources/1c590355-7e82-47b0-94cf-c5f0ce615578-suites%20(1).jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source type="image/avif" srcset="resources/391734e3-d449-40a0-9e93-158aa7365a87-suites%20(1).avif" />
+              <source type="image/webp" srcset="resources/391734e3-d449-40a0-9e93-158aa7365a87-suites%20(1).webp" />
+              <img src="resources/391734e3-d449-40a0-9e93-158aa7365a87-suites%20(1).jpg" alt="Suíte Hotel Vison" loading="lazy" decoding="async" />
+            </picture>
+          </div>
           <div class="hero-overlay" aria-hidden="true"></div>
         </div>
         <div class="container hero-content">
@@ -251,7 +307,11 @@
           <div class="suites-grid reveal">
             <article class="suite-card">
               <div class="suite-media">
-                <img src="resources/68956e6e-42cb-424e-a6c3-564d855f6c50-suites.jpg" alt="Suíte Standard" loading="lazy" decoding="async" />
+                <picture>
+                  <source type="image/avif" srcset="resources/68956e6e-42cb-424e-a6c3-564d855f6c50-suites.avif" />
+                  <source type="image/webp" srcset="resources/68956e6e-42cb-424e-a6c3-564d855f6c50-suites.webp" />
+                  <img src="resources/68956e6e-42cb-424e-a6c3-564d855f6c50-suites.jpg" alt="Suíte Standard" loading="lazy" decoding="async" />
+                </picture>
               </div>
               <div class="suite-body">
                 <div class="suite-title">Suíte Standard</div>
@@ -267,7 +327,11 @@
 
             <article class="suite-card">
               <div class="suite-media">
-                <img src="resources/732e7595-b2d7-4532-ac32-0b0e4dddc47d-suites.jpg" alt="Suíte Luxo" loading="lazy" decoding="async" />
+                <picture>
+                  <source type="image/avif" srcset="resources/732e7595-b2d7-4532-ac32-0b0e4dddc47d-suites.avif" />
+                  <source type="image/webp" srcset="resources/732e7595-b2d7-4532-ac32-0b0e4dddc47d-suites.webp" />
+                  <img src="resources/732e7595-b2d7-4532-ac32-0b0e4dddc47d-suites.jpg" alt="Suíte Luxo" loading="lazy" decoding="async" />
+                </picture>
               </div>
               <div class="suite-body">
                 <div class="suite-title">Suíte Luxo</div>
@@ -284,7 +348,11 @@
 
             <article class="suite-card">
               <div class="suite-media">
-                <img src="resources/a23af49c-5110-422f-b746-f7c2edecb1f7-suites.jpg" alt="Suíte Master" loading="lazy" decoding="async" />
+                <picture>
+                  <source type="image/avif" srcset="resources/a23af49c-5110-422f-b746-f7c2edecb1f7-suites.avif" />
+                  <source type="image/webp" srcset="resources/a23af49c-5110-422f-b746-f7c2edecb1f7-suites.webp" />
+                  <img src="resources/a23af49c-5110-422f-b746-f7c2edecb1f7-suites.jpg" alt="Suíte Master" loading="lazy" decoding="async" />
+                </picture>
               </div>
               <div class="suite-body">
                 <div class="suite-title">Suíte Master</div>
@@ -427,8 +495,7 @@
 
       // Simple hero slideshow
       const slides = Array.from(document.querySelectorAll('.slide'));
-      let currentSlideIndex = 0;
-      function showSlide(index) {
+      let currentSlideIndex = 0;      function showSlide(index) {
         slides.forEach((s, i) => s.classList.toggle('active', i === index));
       }
       function nextSlide() {
@@ -496,5 +563,3 @@
     </script>
   </body>
   </html>
-
-
