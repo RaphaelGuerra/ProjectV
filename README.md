@@ -1,6 +1,6 @@
 # Hotel Vison — Static Website Prototype
 
-Last updated: 2026-01-15
+Last updated: 2026-01-19
 
 ## Table of Contents
 
